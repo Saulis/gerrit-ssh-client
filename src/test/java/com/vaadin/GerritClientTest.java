@@ -19,7 +19,7 @@ import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.*;
 
 @RunWith(JukitoRunner.class)
-public class GerritClientTests {
+public class GerritClientTest {
 
     private final String host = "host";
     private GerritClient sut;

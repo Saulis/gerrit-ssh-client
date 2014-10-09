@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
-public class ListMembersResponseTests {
+public class ListMembersResponseTest {
 
     private ListMembersResponse getResponse(String response) {
         return new ListMembersResponse(response);

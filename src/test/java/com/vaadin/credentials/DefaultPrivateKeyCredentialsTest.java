@@ -1,6 +1,6 @@
 package com.vaadin.credentials;
 
-public class DefaultPrivateKeyCredentialsTests extends CredentialsTests<DefaultPrivateKeyCredentials> {
+public class DefaultPrivateKeyCredentialsTest extends CredentialsTest<DefaultPrivateKeyCredentials> {
 
     @Override
     public DefaultPrivateKeyCredentials createSut() {

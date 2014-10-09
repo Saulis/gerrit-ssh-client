@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
-public class CustomPrivateKeyCredentialsTests extends CredentialsTests<CustomPrivateKeyCredentials> {
+public class CustomPrivateKeyCredentialsTest extends CredentialsTest<CustomPrivateKeyCredentials> {
 
     @Override
     public CustomPrivateKeyCredentials createSut() {

@@ -7,7 +7,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertTrue;
 
-public abstract class CredentialsTests<T extends Credentials> {
+public abstract class CredentialsTest<T extends Credentials> {
 
     protected final String username = "foo";
     protected T sut;

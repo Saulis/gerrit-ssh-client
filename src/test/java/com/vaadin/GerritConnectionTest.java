@@ -19,7 +19,7 @@ import static org.mockito.Matchers.anyInt;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.*;
 
-public class GerritConnectionTests {
+public class GerritConnectionTest {
 
     private final String username = "foo";
     private final String host = "bar";
