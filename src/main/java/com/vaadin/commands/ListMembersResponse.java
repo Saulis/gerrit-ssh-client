@@ -2,18 +2,19 @@ package com.vaadin.commands;
 
 import com.vaadin.Member;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ListMembersResponse {
 
-    private String[] lines;
+    private List<String> lines;
 
     public ListMembersResponse(String response) {
         if(response != null) {
-            lines = response.split(System.lineSeparator());
+
+            lines = Arrays.asList(response.split(System.lineSeparator()));
         } else {
-            lines = new String[] { "" };
+            lines = Arrays.asList(new String[] { "" });
         }
     }
 
@@ -30,7 +31,7 @@ public class ListMembersResponse {
     }
 
     private String getFirstLine() {
-        return lines[0];
+        return lines.get(0);
     }
 
     private int getNumberOfColumns(String line) {
@@ -38,15 +39,10 @@ public class ListMembersResponse {
     }
 
     public Member[] getMembers() {
-        List<Member> members = new ArrayList<Member>();
-
-        if(hasHeaders()) {
-            for(int i=1;i < lines.length;i++) {
-                members.add(getMember(lines[i]));
-            }
-        }
-
-        return members.toArray(new Member[members.size()]);
+            return lines.stream()
+                        .skip(1)
+                        .map(this::getMember)
+                        .toArray(size -> new Member[size]);
     }
 
     private Member getMember(String line) {
