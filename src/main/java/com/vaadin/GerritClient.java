@@ -32,6 +32,8 @@ public class GerritClient {
 
     public Member[] getGroupMembers(String groupName) throws GerritClientException {
         ListMembersCommand command = commandFactory.createListMembersCommand(groupName);
+        command.setRecursive(true);
+
         GerritConnection connection = connectionFactory.getConnection(host, credentials);
 
         ListMembersResponse response = command.getResponse(connection);

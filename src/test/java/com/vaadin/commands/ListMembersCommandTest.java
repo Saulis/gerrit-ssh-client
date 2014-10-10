@@ -27,7 +27,7 @@ public class ListMembersCommandTest {
     public void commandIsNotRecursive() throws GerritClientException {
         getResponse();
 
-        verify(connection).executeCommand("gerrit ls-members foobar");
+        verify(connection).executeCommand("gerrit ls-members 'foobar'");
     }
 
     @Test
@@ -36,7 +36,7 @@ public class ListMembersCommandTest {
 
         getResponse();
 
-        verify(connection).executeCommand("gerrit ls-members foobar --recursive");
+        verify(connection).executeCommand("gerrit ls-members 'foobar' --recursive");
     }
 
     private ListMembersResponse getResponse() {

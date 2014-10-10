@@ -21,7 +21,8 @@ public class ListMembersCommand {
     }
 
     private String getCommand() {
-        return String.format("gerrit ls-members %s%s", groupName, recursive ? " --recursive" : "");
+        //GroupName has to escaped: https://code.google.com/p/gerrit/issues/detail?id=2589
+        return String.format("gerrit ls-members '%s'%s", groupName, recursive ? " --recursive" : "");
     }
 
     public ListMembersResponse getResponse(GerritConnection connection) throws GerritClientException {

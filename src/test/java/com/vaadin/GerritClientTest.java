@@ -66,6 +66,13 @@ public class GerritClientTest {
     }
 
     @Test
+    public void listMembersIsRecursive() throws Exception {
+        getGroupMembers();
+
+        verify(listMembersCommand).setRecursive(true);
+    }
+
+    @Test
     public void membersAreReturned() throws Exception {
         when(listMembersResponse.getMembers()).thenReturn(members);
 
