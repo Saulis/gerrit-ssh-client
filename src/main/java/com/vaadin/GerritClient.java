@@ -8,6 +8,9 @@ import com.vaadin.credentials.Credentials;
 import com.vaadin.factories.CommandFactory;
 import com.vaadin.factories.GerritConnectionFactory;
 
+import java.util.Arrays;
+import java.util.Optional;
+
 public class GerritClient {
 
     private final String host;
@@ -43,5 +46,17 @@ public class GerritClient {
         }
 
         return response.getMembers();
+    }
+
+    public Member getMemberFromGroup(int id, String groupName) throws GerritClientException {
+        Optional<Member> member = Arrays.stream(getGroupMembers(groupName))
+                                        .filter(m -> m.Id == id)
+                                        .findFirst();
+
+        if(member.isPresent()) {
+            return member.get();
+        }
+
+        throw new GerritClientException(String.format("Member with id '%s' is not found in group '%s.'", id, groupName));
     }
 }

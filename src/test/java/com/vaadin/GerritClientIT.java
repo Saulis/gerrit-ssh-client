@@ -44,9 +44,21 @@ public class GerritClientIT {
     }
 
     @Test
-    public void emptyGroupIsFound() throws Exception {
+    public void emptyGroupIsFound() throws GerritClientException {
         Member[] groupMembers = sut.getGroupMembers("Registered Users");
 
         assertThat(groupMembers.length, is(0));
+    }
+
+    @Test
+    public void memberIsFetched() throws GerritClientException {
+        Member member = sut.getMemberFromGroup(1000000, "Vaadin CLA Accepted");
+
+        assertThat(member.Id, is(1000000));
+    }
+
+    @Test(expected = GerritClientException.class)
+    public void memberIsNotFound() throws GerritClientException {
+        sut.getMemberFromGroup(1, "foobar");
     }
 }
