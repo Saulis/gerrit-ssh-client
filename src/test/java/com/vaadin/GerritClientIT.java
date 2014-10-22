@@ -57,6 +57,13 @@ public class GerritClientIT {
         assertThat(member.Id, is(1000000));
     }
 
+    @Test
+    public void utf8IsUsed() throws GerritClientException {
+        Member member = sut.getMemberFromGroup(1000097, "Vaadin CLA Accepted");
+
+        assertThat(member.FullName, is("Sauli Tähkäpää"));
+    }
+
     @Test(expected = GerritClientException.class)
     public void memberIsNotFound() throws GerritClientException {
         sut.getMemberFromGroup(1, "foobar");

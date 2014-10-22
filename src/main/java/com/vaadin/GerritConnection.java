@@ -35,7 +35,7 @@ public class GerritConnection {
 
             InputStream response = channel.getInputStream();
 
-            return IOUtils.toString(response, Charset.defaultCharset());
+            return IOUtils.toString(response, Charset.forName("utf-8"));
         }
         catch (Exception e) {
             throw new GerritClientException(e);
