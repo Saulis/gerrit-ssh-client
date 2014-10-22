@@ -1,9 +1,9 @@
-package com.vaadin;
+package org.vaadin.gerrit;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.assistedinject.FactoryModuleBuilder;
-import com.vaadin.factories.CommandFactory;
-import com.vaadin.factories.GerritConnectionFactory;
+import org.vaadin.gerrit.factories.CommandFactory;
+import org.vaadin.gerrit.factories.GerritConnectionFactory;
 
 public class GerritClientModule extends AbstractModule {
 

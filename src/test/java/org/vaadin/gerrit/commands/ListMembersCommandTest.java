@@ -1,7 +1,7 @@
-package com.vaadin.commands;
+package org.vaadin.gerrit.commands;
 
-import com.vaadin.GerritClientException;
-import com.vaadin.GerritConnection;
+import org.vaadin.gerrit.GerritClientException;
+import org.vaadin.gerrit.GerritConnection;
 import org.junit.Before;
 import org.junit.Test;
 

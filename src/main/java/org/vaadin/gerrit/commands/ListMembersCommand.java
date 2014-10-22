@@ -1,9 +1,9 @@
-package com.vaadin.commands;
+package org.vaadin.gerrit.commands;
 
 import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;
-import com.vaadin.GerritClientException;
-import com.vaadin.GerritConnection;
+import org.vaadin.gerrit.GerritClientException;
+import org.vaadin.gerrit.GerritConnection;
 
 public class ListMembersCommand {
     private boolean recursive;

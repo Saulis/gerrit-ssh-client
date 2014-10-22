@@ -1,4 +1,4 @@
-package com.vaadin;
+package org.vaadin.gerrit;
 
 import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;
@@ -6,7 +6,7 @@ import com.jcraft.jsch.ChannelExec;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
-import com.vaadin.credentials.Credentials;
+import org.vaadin.gerrit.credentials.Credentials;
 import org.apache.commons.io.IOUtils;
 
 import java.io.InputStream;

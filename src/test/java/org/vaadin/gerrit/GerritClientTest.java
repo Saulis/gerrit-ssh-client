@@ -1,11 +1,15 @@
-package com.vaadin;
+package org.vaadin.gerrit;
 
 import com.google.inject.Inject;
-import com.vaadin.commands.ListMembersCommand;
-import com.vaadin.commands.ListMembersResponse;
-import com.vaadin.credentials.Credentials;
-import com.vaadin.factories.CommandFactory;
-import com.vaadin.factories.GerritConnectionFactory;
+import org.vaadin.gerrit.GerritClient;
+import org.vaadin.gerrit.GerritClientException;
+import org.vaadin.gerrit.GerritConnection;
+import org.vaadin.gerrit.Member;
+import org.vaadin.gerrit.commands.ListMembersCommand;
+import org.vaadin.gerrit.commands.ListMembersResponse;
+import org.vaadin.gerrit.credentials.Credentials;
+import org.vaadin.gerrit.factories.CommandFactory;
+import org.vaadin.gerrit.factories.GerritConnectionFactory;
 import org.jukito.JukitoRunner;
 import org.junit.Before;
 import org.junit.Test;

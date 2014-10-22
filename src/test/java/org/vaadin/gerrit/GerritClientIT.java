@@ -1,8 +1,8 @@
-package com.vaadin;
+package org.vaadin.gerrit;
 
-import com.vaadin.credentials.DefaultPrivateKeyCredentials;
 import org.junit.Before;
 import org.junit.Test;
+import org.vaadin.gerrit.credentials.DefaultPrivateKeyCredentials;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;

@@ -1,4 +1,4 @@
-package com.vaadin;
+package org.vaadin.gerrit;
 
 public class GerritClientException extends Exception {
     public GerritClientException(String message) {

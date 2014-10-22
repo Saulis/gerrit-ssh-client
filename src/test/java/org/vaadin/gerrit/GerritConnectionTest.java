@@ -1,11 +1,12 @@
-package com.vaadin;
+package org.vaadin.gerrit;
 
 import com.jcraft.jsch.ChannelExec;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
-import com.vaadin.credentials.Credentials;
-import com.vaadin.credentials.DefaultPrivateKeyCredentials;
+import org.vaadin.gerrit.GerritClientException;
+import org.vaadin.gerrit.GerritConnection;
+import org.vaadin.gerrit.credentials.Credentials;
 import org.junit.Before;
 import org.junit.Test;
 

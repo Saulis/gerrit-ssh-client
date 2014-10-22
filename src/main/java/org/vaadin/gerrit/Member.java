@@ -1,4 +1,4 @@
-package com.vaadin;
+package org.vaadin.gerrit;
 
 public class Member {
     public int Id;

@@ -1,6 +1,6 @@
-package com.vaadin.factories;
+package org.vaadin.gerrit.factories;
 
-import com.vaadin.commands.ListMembersCommand;
+import org.vaadin.gerrit.commands.ListMembersCommand;
 
 public interface CommandFactory {
     public ListMembersCommand createListMembersCommand(String groupName);

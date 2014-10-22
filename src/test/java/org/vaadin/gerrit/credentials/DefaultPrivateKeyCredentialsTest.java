@@ -1,4 +1,4 @@
-package com.vaadin.credentials;
+package org.vaadin.gerrit.credentials;
 
 public class DefaultPrivateKeyCredentialsTest extends CredentialsTest<DefaultPrivateKeyCredentials> {
 

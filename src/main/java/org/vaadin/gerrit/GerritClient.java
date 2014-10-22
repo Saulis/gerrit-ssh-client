@@ -1,12 +1,12 @@
-package com.vaadin;
+package org.vaadin.gerrit;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.vaadin.commands.ListMembersCommand;
-import com.vaadin.commands.ListMembersResponse;
-import com.vaadin.credentials.Credentials;
-import com.vaadin.factories.CommandFactory;
-import com.vaadin.factories.GerritConnectionFactory;
+import org.vaadin.gerrit.commands.ListMembersCommand;
+import org.vaadin.gerrit.commands.ListMembersResponse;
+import org.vaadin.gerrit.credentials.Credentials;
+import org.vaadin.gerrit.factories.CommandFactory;
+import org.vaadin.gerrit.factories.GerritConnectionFactory;
 
 import java.util.Arrays;
 import java.util.Optional;

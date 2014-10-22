@@ -1,4 +1,4 @@
-package com.vaadin.credentials;
+package org.vaadin.gerrit.credentials;
 
 public class CustomPrivateKeyCredentials extends Credentials {
     private final String privateKey;

@@ -1,6 +1,6 @@
-package com.vaadin.commands;
+package org.vaadin.gerrit.commands;
 
-import com.vaadin.Member;
+import org.vaadin.gerrit.Member;
 
 import java.util.Arrays;
 import java.util.List;
